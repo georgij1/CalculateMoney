@@ -1,25 +1,17 @@
-* {
-    font-family: 'Montserrat', sans-serif;
-}
-
 body {
     background-color: #E5E5E5;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .main-wrapper h1 {
     font-weight: bold;
     font-size: 38px;
-    line-height: 46px;
-    color: #000000;
-    margin: 0;
 }
 
 h6 {
-    margin: 0;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
-    color: #000000;
+    font-size: 17px;
+    text-align: center;
 }
 
 input::-webkit-outer-spin-button,
@@ -32,32 +24,25 @@ input[type="number"] {
     height: 53px;
     width: 255px;
     background: #FFFFFF;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     outline: none;
     border: none;
-    padding-left: 20px;
+    font-family: cursive;
+    padding-left: 10px;
 }
 
 .inputs-block {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
+    gap: 15px;
     margin-bottom: 60px;
 }
 
 .inputs-block-column {
-    margin-right: 60px;
-    max-width: 255px;
-}
-
-.inputs-block-column:last-child {
-    margin-left: 10px;
-    margin-right: 0;
-    max-width: 100%;
-}
-
-.inputs-wrapper {
-     margin-top: 30px;
+    width: 277px;
+    margin: auto;
 }
 
 .inputs-wrapper input {
@@ -65,52 +50,32 @@ input[type="number"] {
 }
 
 .inputs-wrapper input:last-child {
-    margin-bottom: 0px;
-}
-
-.total-numb {
-    margin-bottom: 40px;
+    margin-bottom: 0;
 }
 
 .total-numb:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
-.total-numb h6 {
-    margin-bottom: 10px;
-}
-
-.total-numb input{
+.total-numb input {
     font-weight: 600;
     font-size: 45px;
-    line-height: 55px;
-    letter-spacing: 0.03em;
-    color: #000000;
     background-color: transparent;
     box-shadow: none;
-    padding-left: 0;
+    text-align: center;
 }
 
-#accumulation,#spend{
+#accumulation, #spend {
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.03em;
     color: #000000;
+    width: 78px;
 }
 
 .total-numb input::placeholder{
     color: #000000;
-}
-
-
-.range-block {
-    max-width: 592px;
-    margin-bottom: 40px;
-}
-
-.range-block h6{
-    margin-bottom: 20px;
 }
 
 #slider-range {
@@ -163,18 +128,14 @@ input[type="number"] {
 }
 
 .result-block {
-    display: flex;
-    width: 389px;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .result-block .total-numb{
     display: flex;
     align-items: baseline;
-}
-
-.result-block .total-numb h6{
-    margin-right: 10px;
+    margin: auto;
 }
 
 .result-block .total-numb span {
@@ -185,5 +146,63 @@ input[type="number"] {
     color: #000000;
 }
 
+input[type='range'] {
+    width: 280px;
+    margin: auto;
+    display: block;
+}
 
+.calc_percent {
+    margin: 10px auto;
+    display: block;
+    width: 277px;
+}
 
+@media (min-width: 768px) {
+    .main-wrapper h1 {
+        text-align: center;
+    }
+
+    .inputs-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 600px;
+    }
+
+    .inputs-block-column {
+        width: 569px;
+    }
+
+    h6 {
+        text-align: left;
+    }
+
+    .total-numb input {
+        text-align: left;
+    }
+
+    .text_money {
+        width: 600px;
+        margin: 30px auto 30px;
+    }
+
+    input[type='range'] {
+        width: 600px;
+    }
+
+    input[type='number'] {
+        cursor: pointer;
+    }
+
+    input[type='number']:hover {
+        box-shadow: 0 0 10px;
+    }
+
+    .result-block .total-numb {
+        margin: auto;
+    }
+
+    .calc_percent {
+        width: 600px;
+    }
+}
