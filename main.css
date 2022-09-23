@@ -72,6 +72,7 @@ input[type="number"] {
 #accumulation, #spend {
     font-weight: 600;
     font-size: 18px;
+    width: 200px;
     line-height: 22px;
     letter-spacing: 0.03em;
     color: #000000;
@@ -132,13 +133,14 @@ input[type="number"] {
 
 .result-block {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
 }
 
-.result-block .total-numb{
+.result-block .total-numb {
     display: flex;
     align-items: baseline;
     margin: auto;
+    width: 250px;
 }
 
 .result-block .total-numb span {
@@ -172,9 +174,12 @@ input[type='range'] {
     text-align: center;
 }
 
-body::-moz-range-thumb {
-    width: 10px;
-    background-color: black;
+#spend {
+    width: 185px;
+}
+
+#total-month:hover, #total-day:hover, #total-year:hover, #accumulation:hover, #spend:hover {
+    cursor: no-drop;
 }
 
 @media (min-width: 768px) {
@@ -209,7 +214,7 @@ body::-moz-range-thumb {
 
     input[type='range'] {
         width: 600px;
-        cursor: pointer;
+        cursor: e-resize;
     }
 
     input[type='number'] {
@@ -230,6 +235,14 @@ body::-moz-range-thumb {
 
     .inputs-block {
         padding: 70px 0 0;
+    }
+
+    .result-block {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .result-block .total-numb {
+        gap: 10px;
     }
 }
 

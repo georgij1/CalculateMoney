@@ -26,10 +26,13 @@ let accumulation = 0;
 let totalPercents = 0;
 
 // Получаем все input при создании псевдо-массива
+
 const inputs = document.querySelectorAll('.input');
 // Выводим inputs в консоль
+
 console.log(inputs);
 // Пробегаемся по input с помощью цикла for
+
 for (input of inputs){
     console.log(input);
     input.addEventListener('input', () => {
